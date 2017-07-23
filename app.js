@@ -10,7 +10,7 @@ var fileWriter = require('./routes/fileWriter');
 var app = express();
 app.use(cors());
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '5mb'}));
 app.use(cookieParser());
 
 app.use('/', index);
